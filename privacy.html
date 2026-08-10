@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eve — Privacy Policy</title>
+<meta name="description" content="Privacy Policy for Eve. Your personal wellness data stays on your iPhone by default.">
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #16161a;
+    --muted: #5c5c6b;
+    --rule: #e4e4ec;
+    --accent: #5b4bff;
+    --card: #f7f7fb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d0d12;
+      --fg: #ececf2;
+      --muted: #9a9aaa;
+      --rule: #23232e;
+      --accent: #9b8dff;
+      --card: #15151d;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 20px 96px;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  header { padding: 64px 0 32px; border-bottom: 1px solid var(--rule); }
+  h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 12px; letter-spacing: -0.02em; }
+  .lede { color: var(--muted); margin: 0; font-size: 1.05rem; }
+  .meta { margin-top: 20px; font-size: 0.9rem; color: var(--muted); }
+  .summary {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 20px 22px;
+    margin: 32px 0;
+  }
+  .summary p { margin: 0; }
+  h2 {
+    font-size: 1.12rem;
+    margin: 40px 0 10px;
+    letter-spacing: -0.01em;
+    scroll-margin-top: 20px;
+  }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  code {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 5px;
+    padding: 1px 5px;
+    font-size: 0.9em;
+  }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Eve — Privacy Policy</h1>
+  <p class="lede">The short version: your personal wellness data stays on your iPhone unless you explicitly protect your journey. Protected journeys are encrypted on-device before backup to your private iCloud Drive.</p>
+  <p class="meta">Last updated: 10 August 2026</p>
+</header>
+
+<div class="summary">
+  <p>Eve doesn’t sell your data, doesn’t show ads, and doesn’t track you across other apps or websites. Your private mood history, check-in notes, companion conversations, and durable memories stay on your device. Only content you explicitly choose to share enters a social audience.</p>
+</div>
+
+<h2>1. Where your data lives</h2>
+<p>Your profile, mood and energy logs, companion conversations, Eve’s memories, goals, circles, photos, and videos are stored locally on your iPhone by default. Optional encrypted journey backup, Frontier intelligence, and the optional Health, Calendar, weather, Spotify, Feed Agent, social, and messaging connections are described below. Private wellness notes are not uploaded. Public posts and their attached media are uploaded to Eve’s social service so other people and devices can receive them. Content posted to other audiences is handled only by that audience’s specific service and policy.</p>
+
+<h2>2. AI choices</h2>
+<p>Eve’s companion relationship layer, safety routing, memory, and device-action approvals operate on your iPhone without requiring a separate model download. On supported devices, Eve may use Apple’s on-device intelligence for language generation. You can also choose an optional compatible model from Eve’s private model library; once downloaded, that model runs on your iPhone.</p>
+<p>Frontier intelligence + live web is a separate setting that is off by default. If you turn it on, and only when you explicitly ask for current information from the web, Eve sends <strong>your search question and nothing else</strong> through Eve’s authenticated Supabase Edge Function to OpenAI for response generation and web search. Eve does not include your conversation history, recent messages, your name, your purpose or strengths, your goals, your memories, Apple Health data, Calendar events, faith or cultural notes, or your social feed in that request. OpenAI receives a pseudonymous safety identifier, not your Eve handle. Eve requests that responses are not stored by the model API. You can turn Frontier off at any time to return to on-device generation.</p>
+<p>If you choose to download an optional model, your iPhone downloads those files directly from the third-party host that publishes them. That host can see your device’s network request for the files, the same as any download. Your conversations, memories, and personal context are never sent there. Chat scrollback and Eve’s growth memories remain stored locally, and you can clear the conversation or delete memories at any time.</p>
+<p>Eve also uses Apple’s on-device NaturalLanguage framework to help recognize language that may indicate you’re in distress, so it can point you to real support resources. This analysis runs entirely on your device before any model route and is not stored separately from the message itself.</p>
+
+<h2>3. Health data</h2>
+<p>If you connect Apple Health, Eve <strong>reads</strong> activity data (steps, energy, exercise, sleep, water, mindful minutes, workouts) only with your permission, to show your fitness rings and personal context. <strong>Eve never writes to Apple Health</strong> — it does not create, edit, or delete entries in your health record. Health data never leaves your device, is never shared with anyone, is never used for advertising, and is never sold — period, and this applies even if you later disconnect Health or delete Eve.</p>
+
+<h2>4. Calendar</h2>
+<p>If you connect Calendar, Eve reads plain event titles and start times for the next 48 hours only, to give the companion sensible timing for check-ins and to mention what’s coming up. Eve never reads event notes, locations, or attendees. When you explicitly ask Eve to schedule something, it creates a local draft containing only the event title and proposed time and opens Apple’s Calendar editor. Nothing is added until you review the details and tap Add; Eve does not silently edit or delete existing events. Calendar data stays on your device and is used only inside your own chat context.</p>
+
+<h2>5. Location and weather</h2>
+<p>If you enable automatic atmosphere and allow location access, Eve requests an approximate location (about kilometer-level accuracy). Latitude and longitude are sent to Open-Meteo to return current weather, and Apple location services may provide a nearby city label. Eve does not use this information for advertising or tracking. You can turn automatic atmosphere off and deny location access at any time in iOS Settings.</p>
+
+<h2>6. Spotify</h2>
+<p>Eve includes an on-device “vibe mix” metadata catalog that works without an account connection and does not contain or play audio. If you choose to connect Spotify, Eve uses Spotify’s OAuth sign-in and requests only permission to read your top items and saved library so you can search and attach real tracks. Eve stores OAuth tokens in this iPhone’s Keychain; it never sees your Spotify password. Selecting a real track opens Spotify for playback — Eve does not download, cache, stream, rebroadcast, or feed Spotify content into its AI model. You can disconnect anytime in Settings, which removes Eve’s local Spotify tokens and stops further access.</p>
+
+<h2>7. Feed Agents and Supabase</h2>
+<p>If live Feed Agents are enabled, Eve creates a passwordless anonymous Supabase Auth session and sends only the catalog keys for agents you selected to retrieve public publisher content. The service stores an anonymous user identifier and rate-limit records, and shares a cache containing public publisher items only. Your custom agent names, likes, skips, shares, private chat, memories, notes, Health, Calendar, media, and location are not sent with Feed Agent requests.</p>
+<p>Agent choices and engagement learning stay on your iPhone. The optional “Use my vibe” setting is off until you enable it; when enabled, simple vibe and charge signals may re-order public stories only on your iPhone and are not uploaded. Sharing an item invokes Apple’s share sheet with the publisher’s canonical link and no Eve profile or personalization data attached.</p>
+
+<h2>8. Friend and group messages</h2>
+<p>In this build, friend and group messages, captions, photos, and videos are encrypted and stored only on this iPhone; live cross-device delivery is not connected yet. The app labels that state <em>Protected on this iPhone</em> rather than claiming end-to-end delivery. When live messaging is enabled, Eve is designed to encrypt message and media content before upload so the delivery service stores ciphertext, public device-key packages, conversation membership, sender and recipient identifiers, content type, timestamps, expiration, and delivery/read receipts. Those routing records are metadata and are not end-to-end encrypted. Eve cannot prevent a recipient from saving, recording, or screenshotting content.</p>
+
+<h2>9. Optional journey recovery</h2>
+<p>Eve works without an account wall. If you later choose Protect your journey, Sign in with Apple can link recovery and iCloud Keychain can synchronize a random encryption key. Your core journey is encrypted on your iPhone with AES-GCM before the ciphertext is saved in your private iCloud Drive. The protected core includes your profile, check-ins, companion chat, missions, memories, progress, and the learned support preferences that shape your companion’s personality. Photos, videos, and social DMs are not included in this backup version. Apple and Eve do not receive readable wellness content through this backup — Apple stores only encrypted ciphertext it cannot read.</p>
+
+<h2>10. What we don’t do</h2>
+<p>We don’t sell your data. We don’t show ads. We don’t use App Tracking Transparency because we don’t track you across other apps or websites, and we don’t share your data with data brokers or advertising networks. Your private mood history, check-in notes, and durable memories stay on your device. Private companion chat stays on-device unless you explicitly enable Frontier, in which case only the bounded request described above leaves the device. Only content you explicitly choose to share enters a social audience.</p>
+
+<h2>11. What others in the app can see</h2>
+<p>You control your visibility: your public profile shows your name, handle, join date, and what you choose to share. New accounts are private by default. Check-ins stay private by default. If you explicitly enable Share vibe + charge with circles, joined circles receive only that coarse signal; your optional note stays private with your companion. Purchases never enable this setting. Your live charge visibility starts hidden, and media audience is set by you. Friends and mutuals appear to other people only if you enable Show friends on profile. Replies and a link to your AI companion’s own profile become visible to your mutual Tap-In friends; visibility to followers is controlled by separate settings in Edit Profile.</p>
+
+<h2>12. Purchases</h2>
+<p>Payments for boosts and memberships are processed by Apple. We never see or store your card numbers, billing address, or other payment details — Apple handles that under its own privacy policy. We only receive confirmation that a purchase was made, which product, and its status (active, expired, refunded), so Eve can unlock the right features on your device.</p>
+
+<h2>13. Deleting your data</h2>
+<p>Settings → Account → Delete &amp; reset account first deletes any authenticated Supabase account for this install when cloud services are configured, then permanently erases Eve’s local profile, chats, memories, companion personality learning, goals, circles, Feed Agent learning, media files, and purchase records. If cloud deletion cannot be confirmed, Eve leaves local credentials and data intact so you can retry. If journey recovery was enabled, Eve also removes the encrypted iCloud journey backup and recovery credentials. This cannot be undone. Deleting the app without using this option first may leave an encrypted iCloud backup or cloud account in place until you delete it separately or contact us.</p>
+
+<h2>14. Children</h2>
+<p>Eve is not directed at children under 13, and we don’t knowingly collect personal information from them. If we learn that a child under 13 has provided us with personal information, we will take steps to delete it. Parents who believe their child has used Eve can contact us at the address below.</p>
+
+<h2>15. Your rights</h2>
+<p>Depending on where you live, you may have rights to access, correct, export, or delete your personal data, and to object to or restrict certain processing. Because almost everything Eve stores lives only on your device, you can exercise most of these rights directly, at any time, through Settings — viewing your data in the Brain tab, editing it in Edit Profile, or erasing it with Delete &amp; reset account. For anything else, contact us at the address below.</p>
+
+<h2>16. Changes</h2>
+<p>If this policy changes in a way that affects your data, the app will tell you. The latest version always lives in Settings → Legal.</p>
+
+<h2>17. Contact</h2>
+<p>Privacy questions: <a href="mailto:roobbyythompson@icloud.com">roobbyythompson@icloud.com</a></p>
+<p>X: <a href="https://x.com/RobbyyThompson" rel="noopener">@RobbyyThompson</a></p>
+
+<footer>
+  <p>This policy mirrors the in-app text at Settings → Legal in Eve for iPhone.</p>
+</footer>
+
+</main>
+</body>
+</html>
