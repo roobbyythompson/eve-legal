@@ -109,6 +109,7 @@
 <h2>7. EVE accounts, Feed Agents, and Supabase</h2>
 <p>Eve uses Supabase Auth and its social service for account identifiers, public names and handles, profile fields you choose to publish, relationships and circles, posts, encrypted message delivery, moderation, and rate limits. Before Sign in with Apple, Eve may use a passwordless anonymous Supabase Auth identifier.</p>
 <p>When you use Sign in with Apple, Apple provides a stable account identifier and may provide an Apple private-relay email address. Supabase stores that authentication information linked to your EVE account. Eve does not display the relay email on your profile or use it for advertising.</p>
+<p>Supabase Auth and API infrastructure also records the IP address and user agent attached to authentication and service requests in security and audit logs, where they can be associated with the account. Eve uses these logs only for authentication security, abuse prevention, and reliability — never advertising or cross-app tracking.</p>
 <p>Feed Agents send only the catalog keys for agents you selected to retrieve public publisher content. Your custom agent names, engagement learning, private companion chat, memories, notes, Health, Calendar, media, and location are not sent with Feed Agent requests. Sharing an item uses Apple’s share sheet with the publisher’s canonical link and no EVE personalization data attached.</p>
 
 <h2>8. Friend and group messages</h2>
