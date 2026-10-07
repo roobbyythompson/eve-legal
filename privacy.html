@@ -78,7 +78,7 @@
 <header>
   <h1>Eve — Privacy Policy</h1>
   <p class="lede">The short version: your private companion journey stays on your iPhone unless you explicitly protect it. Your EVE social account is separate and can be recovered with Sign in with Apple.</p>
-  <p class="meta">Last updated: 15 August 2026</p>
+  <p class="meta">Last updated: 6 September 2026</p>
 </header>
 
 <div class="summary">
@@ -94,61 +94,76 @@
 <p>If you choose to download an optional model, your iPhone downloads those files directly from the third-party host that publishes them. That host can see your device’s network request for the files, the same as any download. Your conversations, memories, and personal context are never sent there. Chat scrollback and Eve’s growth memories remain stored locally, and you can clear the conversation or delete memories at any time.</p>
 <p>Eve also uses Apple’s on-device NaturalLanguage framework to help recognize language that may indicate you’re in distress, so it can point you to real support resources. This analysis runs entirely on your device before any model route and is not stored separately from the message itself.</p>
 
-<h2>3. Health data</h2>
+<h2>3. Looking things up</h2>
+<p>The globe above the keyboard decides whether Eve may look outside your iPhone. It is on when you install the app, and you can switch it off at any time. With it off, Eve answers from what is already on your device and says plainly that it did not look anything up.</p>
+<p>Only a question about the world can leave your phone. Anything about you — how you feel, your missions, your people, your body, your relationships, or anything else phrased as yours — stays on the device whatever this setting says. Eve declines the lookup rather than sending it.</p>
+<p>When a world question does leave, Eve sends the question and nothing else about you. Wikipedia lookups go through Eve's own Supabase Edge Function, which carries your account's authentication token because it is Eve's service; the question is shortened before it is sent, and Eve may include the answer it has drafted so the service can check that draft against the source. News lookups go directly to Google News' public RSS search as a search term with the region and language of your device, and carry no account identifier. Publisher feeds you chose in Feed Agents are fetched as described in the Feed Agents section, and weather is described in the location section.</p>
+<p>Eve does not send your name, handle, profile, memories, private companion conversations, mood or charge history, Health data, Calendar events, photos, messages, or contacts with any of these lookups.</p>
+
+<h2>4. Health data</h2>
 <p>If you connect Apple Health, Eve <strong>reads</strong> activity data (steps, energy, exercise, sleep, water, mindful minutes, workouts) only with your permission, to show your fitness rings and personal context. <strong>Eve never writes to Apple Health</strong> — it does not create, edit, or delete entries in your health record. Health data never leaves your device, is never shared with anyone, is never used for advertising, and is never sold — period, and this applies even if you later disconnect Health or delete Eve.</p>
 
-<h2>4. Calendar</h2>
+<h2>5. Calendar</h2>
 <p>If you connect Calendar, Eve reads plain event titles and start times for the next 48 hours only, to give the companion sensible timing for check-ins and to mention what’s coming up. Eve never reads event notes, locations, or attendees. When you explicitly ask Eve to schedule something, it creates a local draft containing only the event title and proposed time and opens Apple’s Calendar editor. Nothing is added until you review the details and tap Add; Eve does not silently edit or delete existing events. Calendar data stays on your device and is used only inside your own chat context.</p>
 
-<h2>5. Location and weather</h2>
+<h2>6. Location and weather</h2>
 <p>If you enable automatic atmosphere and allow location access, Eve requests an approximate location (about kilometer-level accuracy). Latitude and longitude are sent to Open-Meteo to return current weather, and Apple location services may provide a nearby city label. Eve does not use this information for advertising or tracking. You can turn automatic atmosphere off and deny location access at any time in iOS Settings.</p>
 
-<h2>6. Spotify</h2>
-<p>Spotify account connection is locked and marked <strong>Coming soon</strong> in Eve 1.0. This version does not start Spotify authorization, request Spotify account data, publish a Spotify soundtrack on profiles, or receive Spotify OAuth tokens. Eve’s separate on-device vibe catalog contains metadata only and does not contain or play audio.</p>
+<h2>7. Apple Music</h2>
+<p>Apple Music is the only music service Eve connects to. With your permission Eve searches the Apple Music catalog so you can pin a song to your profile or attach one to a post. Eve stores only the song’s public catalog details — title, artist, artwork, catalog id, and Apple’s thirty-second preview address. Eve does not read your library, your listening history, or your Apple Music account, and it never streams audio itself. Eve’s separate on-device vibe catalog contains metadata only and does not contain or play audio.</p>
 
-<h2>7. EVE accounts, Feed Agents, and Supabase</h2>
+<h2>8. EVE accounts, Feed Agents, and Supabase</h2>
 <p>Eve uses Supabase Auth and its social service for account identifiers, public names and handles, profile fields you choose to publish, relationships and circles, posts, encrypted message delivery, moderation, and rate limits. Before Sign in with Apple, Eve may use a passwordless anonymous Supabase Auth identifier.</p>
 <p>When you use Sign in with Apple, Apple provides a stable account identifier and may provide an Apple private-relay email address. Supabase stores that authentication information linked to your EVE account. Eve does not display the relay email on your profile or use it for advertising.</p>
 <p>Supabase Auth and API infrastructure also records the IP address and user agent attached to authentication and service requests in security and audit logs, where they can be associated with the account. Eve uses these logs only for authentication security, abuse prevention, and reliability — never advertising or cross-app tracking.</p>
 <p>Feed Agents send only the catalog keys for agents you selected to retrieve public publisher content. Your custom agent names, engagement learning, private companion chat, memories, notes, Health, Calendar, media, and location are not sent with Feed Agent requests. Sharing an item uses Apple’s share sheet with the publisher’s canonical link and no EVE personalization data attached.</p>
 
-<h2>8. How long social content stays</h2>
+<h2>9. How long social content stays</h2>
 <p>Stories last 24 hours, then they are gone.</p>
 <p>Clips play for 90 days. After that the whole clip post is gone — the video and the caption. You can always post a new clip. Your three most recent clips stay on your profile; posting a fourth retires the oldest one entirely.</p>
 <p>Photos you post stay. You can keep up to 20 live photos on your public profile.</p>
-<p>Every chat and group chat keeps the latest 1,000 messages. Older messages drop off automatically. A 48-hour chat disappears for both people when the timer hits zero. Keep chat stays until either of you switches back to 48 hours. Photos and videos in a 48-hour chat open once, then vanish for both of you.</p>
+<p>Every chat and group chat keeps the latest 1,000 messages. Older messages drop off automatically. A chat disappears after 48 hours unless both people choose Keep in that conversation. Either person can switch back to 48 hours. Photos and videos in a 48-hour chat open once, then vanish for both of you.</p>
 
-<h2>9. Friend and group messages</h2>
+<h2>10. Friend and group messages</h2>
 <p>Eve supports live direct and group messaging. Message text, captions, photos, and supported short videos are encrypted on the sending iPhone before upload. The delivery service and private media bucket store ciphertext rather than readable content.</p>
 <p>The service stores public device-key packages, conversation membership, sender and recipient identifiers, content type, timestamps, expiration, and delivery/read receipts to route messages. Those routing records are metadata and are not end-to-end encrypted. A newly added or recovered device can send and receive new messages after registering its key, but it may not decrypt messages or media encrypted before that device key existed. Eve cannot prevent a recipient from saving, recording, or screenshotting content.</p>
 
-<h2>10. Optional journey recovery</h2>
+<h2>11. Companion plans between friends</h2>
+<p>Eve's companion can carry a plan to a friend's companion &mdash; &ldquo;ask Sam if he wants to get coffee Friday&rdquo;. All of it is off until you turn it on.</p>
+<p><strong>Nothing is sent without you.</strong> Eve drafts the plan, reads it back, and sends it only after you say yes in that same turn. Silence, a question, or a change of subject are not consent. The activity and any note are text you typed; the companion never writes them for you.</p>
+<p><strong>How it travels.</strong> A plan is an ordinary message in the encrypted conversation you already have with that person, encrypted on your iPhone before upload exactly like a photo. Our service learns only what it learns about a photo &mdash; that a conversation had traffic. There is no separate plans database, so we never hold a record of who is planning what with whom.</p>
+<p><strong>Both people decide, and the stricter setting wins.</strong> Your companion may coordinate only with people you are mutually tapped in with, unless you widen it to shared circles. Your setting and theirs must both allow it; neither of you can widen the other. Your default is mutuals only.</p>
+<p><strong>Public or private.</strong> Plans are private between the two of you by default. If &mdash; and only if &mdash; both people have chosen to publish plans and have a discoverable companion profile, an accepted plan may be listed on the companion's profile. One person keeping a plan private keeps it private for both. Nothing is ever published before the other person has answered.</p>
+<p><strong>When your companion speaks first.</strong> If you allow it, your companion may notice that you and a mutual friend have not spoken in a while and ask whether you would like it to reach out. This is off by default. It reads only counts, direction, and timestamps &mdash; never the contents of any message, which it could not read in any case. It is limited to at most three such messages a day across everyone, respects your quiet hours, and stays quiet about people you have barely spoken to. Your companion never speaks to your friend without your yes.</p>
+<p><strong>What we still refuse, at every setting.</strong> Your companion will not publish invented conversations between itself and another person's companion. Only something a person actually typed and confirmed travels.</p>
+
+<h2>12. Optional account and journey recovery</h2>
 <p>Recovery has two separate layers. First, Sign in with Apple authenticates your permanent EVE account through Supabase. On another supported iPhone signed into the same Apple account, that can restore your public profile, handle, social graph, feed access, and the ability to use a fresh companion and send new messages even when iCloud Drive or iCloud Keychain is turned off. Native Sign in with Apple uses the Apple account available on that device; it is not a password field for an arbitrary Apple account on an unsigned-in device.</p>
 <p>Second, if you choose <strong>Protect private journey with iCloud</strong>, Eve encrypts your core journey on your iPhone with AES-GCM before saving ciphertext in your private iCloud Drive, while a random key is synchronized through iCloud Keychain. This includes profile, check-ins, companion chat, missions, memories, progress, and learned support preferences. Photos, videos, social DMs, and historical message device keys are not included.</p>
 <p>If iCloud Drive or Keychain is unavailable during Apple account recovery, Eve keeps the social account usable but marks the old private journey as waiting for iCloud. It does not generate a replacement key or upload a fresh backup over the protected journey.</p>
 
-<h2>11. What we don’t do</h2>
+<h2>13. What we don’t do</h2>
 <p>We don’t sell your data. We don’t show ads. We don’t use App Tracking Transparency because we don’t track you across other apps or websites, and we don’t share your data with data brokers or advertising networks. Your private mood history, check-in notes, and durable memories stay on your device. Private companion chat stays on-device unless you explicitly enable Frontier, in which case only the bounded request described above leaves the device. Only content you explicitly choose to share enters a social audience.</p>
 
-<h2>12. What others in the app can see</h2>
+<h2>14. What others in the app can see</h2>
 <p>Your public profile link can show your name, handle, join date, and public profile fields. New accounts are private by default. Public-account posts can be viewed by other EVE users; private-account posts require the relationship level shown in the app. Check-ins stay private by default. If you explicitly share vibe and charge with circles, joined circles receive only that coarse signal. You separately control charge, friends, replies, AI-companion links, and media visibility.</p>
 
-<h2>13. Purchases</h2>
-<p>Eve 1.0 does not offer a checkout, in-app purchase, or subscription for sale. Amplify and Frontier are locked and marked as coming soon. If a later version offers Apple In-App Purchases, this policy will be updated before sale; Eve will not receive your card number or billing address from Apple.</p>
+<h2>15. Purchases</h2>
+<p>Eve 1.0 does not offer a checkout, in-app purchase, or subscription for sale. The Amplify tab is visible but locked — its content is blurred and its only working feature is the free Amplify Studio — and Frontier is not offered. If a later version offers Apple In-App Purchases, this policy will be updated before sale; Eve will not receive your card number or billing address from Apple.</p>
 
-<h2>14. Deleting your data</h2>
-<p><strong>Settings → Account → Delete &amp; reset account</strong> first requests deletion of the authenticated Supabase account and its EVE social data, then permanently erases the local journey and media. If cloud deletion cannot be confirmed, Eve leaves local credentials and data intact so you can retry. If private journey recovery was enabled, Eve also removes the encrypted iCloud backup and recovery credentials. Deleting the app without this option may leave a cloud account or encrypted iCloud backup in place.</p>
+<h2>16. Deleting your data</h2>
+<p><strong>Settings → Account → Delete account</strong> first requests deletion of the authenticated Supabase account and its EVE social data, then permanently erases the local journey and media. If cloud deletion cannot be confirmed, Eve leaves local credentials and data intact so you can retry. If private journey recovery was enabled, Eve also removes the encrypted iCloud backup and recovery credentials. Deleting the app without this option may leave a cloud account or encrypted iCloud backup in place.</p>
 
-<h2>15. Children</h2>
+<h2>17. Children</h2>
 <p>Eve is not directed at children under 13, and we don’t knowingly collect personal information from them. If we learn that a child under 13 has provided us with personal information, we will take steps to delete it. Parents who believe their child has used Eve can contact us at the address below.</p>
 
-<h2>16. Your rights</h2>
-<p>Depending on where you live, you may have rights to access, correct, export, or delete your personal data, and to object to or restrict certain processing. Because almost everything Eve stores lives only on your device, you can exercise most of these rights directly, at any time, through Settings — viewing your data in the Brain tab, editing it in Edit Profile, or erasing it with Delete &amp; reset account. For anything else, contact us at the address below.</p>
+<h2>18. Your rights</h2>
+<p>Depending on where you live, you may have rights to access, correct, export, or delete your personal data, and to object to or restrict certain processing. Because almost everything Eve stores lives only on your device, you can exercise most of these rights directly, at any time, through Settings — viewing your data in the Brain tab, editing it in Edit Profile, or erasing it with Delete account. For anything else, contact us at the address below.</p>
 
-<h2>17. Changes</h2>
+<h2>19. Changes</h2>
 <p>If this policy changes in a way that affects your data, the app will tell you. The latest version lives in Settings → Legal and at this public URL.</p>
 
-<h2>18. Contact</h2>
+<h2>20. Contact</h2>
 <p>Privacy questions: <a href="mailto:roobbyythompson@icloud.com">roobbyythompson@icloud.com</a></p>
 <p>X: <a href="https://x.com/RobbyyThompson" rel="noopener">@RobbyyThompson</a></p>
 
