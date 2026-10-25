@@ -78,7 +78,7 @@
 <header>
   <h1>Eve — Privacy Policy</h1>
   <p class="lede">The short version: your private companion journey stays on your iPhone unless you explicitly protect it. Your EVE social account is separate and can be recovered with Sign in with Apple.</p>
-  <p class="meta">Last updated: 6 September 2026</p>
+  <p class="meta">Last updated: 9 October 2026</p>
 </header>
 
 <div class="summary">
@@ -97,7 +97,10 @@
 <h2>3. Looking things up</h2>
 <p>The globe above the keyboard decides whether Eve may look outside your iPhone. It is on when you install the app, and you can switch it off at any time. With it off, Eve answers from what is already on your device and says plainly that it did not look anything up.</p>
 <p>Only a question about the world can leave your phone. Anything about you — how you feel, your missions, your people, your body, your relationships, or anything else phrased as yours — stays on the device whatever this setting says. Eve declines the lookup rather than sending it.</p>
-<p>When a world question does leave, Eve sends the question and nothing else about you. Wikipedia lookups go through Eve's own Supabase Edge Function, which carries your account's authentication token because it is Eve's service; the question is shortened before it is sent, and Eve may include the answer it has drafted so the service can check that draft against the source. News lookups go directly to Google News' public RSS search as a search term with the region and language of your device, and carry no account identifier. Publisher feeds you chose in Feed Agents are fetched as described in the Feed Agents section, and weather is described in the location section.</p>
+<p>When a world question does leave, it goes straight from your iPhone to public sources, never through an Eve server and never to an AI service. Eve reads the question on your phone and sends only its public part: for “how tall is Mount Everest”, the words “Mount Everest”. These requests carry no account identifier, name or handle; like any request on the internet, they reach the source with your device’s network address.</p>
+<p><strong>Sources that may receive the public words of a question:</strong> Wikipedia, Wikidata and Wiktionary (encyclopedia summaries, structured facts and definitions); Google News (news search, with your device’s region and language); Open Library, Internet Archive, MusicBrainz, Crossref, OpenAlex and PubMed (books, archives, music, research and medical research); the Federal Register, National Archives, FBI Vault, CIA Reading Room, ODNI, AARO and the US Department of Justice (public government records); and the Apple Music catalog, when you search for a song.</p>
+<p><strong>Sources Eve reads without sending anything of yours:</strong> public feeds and pages from BBC, NPR, The New York Times, Dow Jones, The Guardian, ESPN, NASA, Space.com, Smithsonian, ScienceDaily, Carbon Brief, Rolling Stone, Billboard, Pitchfork, Apple Music charts and Megaphone podcast feeds; public podcast transcripts on Podscripts, read to sum up in one line what a guest argued; and public video previews from YouTube, Vimeo and Dailymotion. Publisher feeds you chose in Feed Agents are fetched as described in the Feed Agents section.</p>
+<p><strong>Weather</strong> sends a place to Open-Meteo, as described in the location section. <strong>The optional on-device model</strong> is downloaded from Hugging Face only if you choose to install it; the download sends nothing about you, and the model runs entirely on your iPhone.</p>
 <p>Eve does not send your name, handle, profile, memories, private companion conversations, mood or charge history, Health data, Calendar events, photos, messages, or contacts with any of these lookups.</p>
 
 <h2>4. Health data</h2>
