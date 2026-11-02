@@ -7,6 +7,6 @@ Public legal pages for the Eve iPhone app.
 - `support.html` — Support
 
 Republished 2 November 2026 from the app repository's `web/` copies
-(privacy, terms and support dated 1 November 2026).
+(privacy and terms dated 2 November 2026, support 1 November 2026).
 
 The app source lives in a separate private repository.
